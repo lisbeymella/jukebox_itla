@@ -1,0 +1,96 @@
+#include "Reproduction.h"
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+song *ptr;
+int cont=0;
+Reproduction::Reproduction(){}
+Reproduction::~Reproduction(){}
+
+void Reproduction::add(start start,int id){
+ end new;
+  new=(end)malloc(sizeof(song));
+
+ if(new==NULL)
+
+ cout<<"ERROR\n";
+
+ new->id=id;
+
+ new->next=start;
+
+ new->previous=star->previous;
+
+ Start >previous->next=new;
+
+ new->previous=new;
+ cont++;
+
+}
+bool Reproduction::remove(start start,int id){
+ if (inicio != NULL) {
+		song *actual;
+		song *articulo_del;
+		actualy = start;
+
+		for (int i = 1; i < id; ++i) {
+			actualy = actualy->next;
+		}
+		Article_of the  = actualy->next;
+		actualy->next=actualy->next->next;
+		remove (article_of the);
+	} else {
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cout << "--the list is empty--\n";
+	}
+return 8;
+}
+	//void modify(int indice, struct Contact contact);
+
+void Reproduction::list(song * ptr){
+ song *p;
+ int k=0;
+
+ if(ptr!=NULL)
+
+ {
+
+ cout<<"List the element save:\n";
+
+ p=ptr->next;
+
+ do{
+ if(p->id!=0)
+ cout<<p->id;
+
+ p=p->next;
+
+ }while(p!=ptr->next);
+ }
+
+ else
+
+ {
+
+ cout<<"No items in List\n";
+
+ }
+
+}
+
+Reproduction::start Reproduction::creteNodo(){
+ Inicio L;
+
+ L=(start)malloc(sizeof(song));
+
+ if(L==NULL);
+
+ cout<<"Error, memory Insuciente\n";
+
+ L->next=L->previousr=L;
+
+ return L;
+}
